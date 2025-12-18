@@ -30,7 +30,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <Beaker className="h-5 w-5" />
             </div>
             <span className="font-serif font-bold text-xl tracking-tight text-foreground">
-              Advanced Research Lab
+              WSI Lab
             </span>
           </Link>
 
@@ -95,7 +95,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-2 mb-4">
                 <Beaker className="h-5 w-5 text-primary" />
-                <span className="font-serif font-bold text-lg">Advanced Research Lab</span>
+                <span className="font-serif font-bold text-lg">WSI Lab</span>
               </div>
               <p className="text-muted-foreground max-w-sm mb-6">
                 Pioneering the future of material science and nanotechnology through innovative research and interdisciplinary collaboration.
@@ -137,7 +137,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           <div className="border-t mt-12 pt-8 text-center text-sm text-muted-foreground">
-            © 2024 Advanced Research Lab. All rights reserved.
+            © 2024 WSI Lab. All rights reserved.
           </div>
         </div>
       </footer>

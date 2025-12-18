@@ -27,7 +27,7 @@ export default function Home() {
               Leading Innovation in Material Science
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Advanced Research <br />
+              WSI <br />
               <span className="text-primary">Laboratory</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-xl leading-relaxed">
