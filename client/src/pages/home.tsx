@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Microscope, Users, FileText, Lightbulb } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/modern_academic_research_laboratory_interior.png";
-import wsiLogo from "@assets/logo_1766052064317.png";
 
 export default function Home() {
   return (
@@ -24,21 +23,16 @@ export default function Home() {
         {/* Content */}
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-2xl animate-in slide-in-from-left-8 duration-700 fade-in">
-            <img 
-              src={wsiLogo} 
-              alt="WSI Lab" 
-              className="h-16 mb-6 drop-shadow-lg"
-            />
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
               Advanced Research in Wireless Sensing
             </h1>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg" className="px-8">
+            <div className="flex flex-wrap gap-4">
+              <Button asChild size="lg" className="px-8 rounded-3xl">
                 <Link href="/projects">
                   Explore <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="px-8 bg-background/40 backdrop-blur-sm hover:bg-background/70">
+              <Button asChild size="lg" variant="outline" className="px-8 rounded-3xl bg-background/40 backdrop-blur-sm hover:bg-background/70">
                 <Link href="/about">
                   About
                 </Link>
