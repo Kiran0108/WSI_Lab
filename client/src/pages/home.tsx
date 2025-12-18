@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Microscope, Users, FileText, Lightbulb } from "lucide-react";
 import { Link } from "wouter";
 import heroImage from "@assets/generated_images/modern_academic_research_laboratory_interior.png";
+import wsiLogo from "@assets/logo_1766052064317.png";
 
 export default function Home() {
   return (
@@ -23,12 +24,17 @@ export default function Home() {
         {/* Content */}
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-2xl animate-in slide-in-from-left-8 duration-700 fade-in">
+            <img 
+              src={wsiLogo} 
+              alt="WSI Lab" 
+              className="h-24 mb-8 drop-shadow-lg"
+            />
             <div className="inline-block px-3 py-1 mb-6 rounded-full bg-secondary/80 backdrop-blur-sm border border-secondary text-secondary-foreground text-sm font-medium">
-              Leading Innovation in Material Science
+              Leading Innovation in Wireless Sensing & Imaging
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              WSI <br />
-              <span className="text-primary">Laboratory</span>
+              Advanced <br />
+              <span className="text-primary">Research</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-xl leading-relaxed">
               We explore the frontiers of nanotechnology and advanced materials to solve tomorrow's energy challenges.

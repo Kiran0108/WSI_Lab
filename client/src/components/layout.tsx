@@ -1,9 +1,10 @@
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
-import { Beaker, Menu, Youtube, Mail, MapPin, Phone } from "lucide-react";
+import { Menu, Youtube, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import wsiLogo from "@assets/logo_1766052064317.png";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -26,12 +27,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="bg-primary text-primary-foreground p-2 rounded-md transition-transform group-hover:scale-105">
-              <Beaker className="h-5 w-5" />
-            </div>
-            <span className="font-serif font-bold text-xl tracking-tight text-foreground">
-              WSI Lab
-            </span>
+            <img 
+              src={wsiLogo} 
+              alt="WSI Lab" 
+              className="h-12 transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -94,8 +94,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-2 mb-4">
-                <Beaker className="h-5 w-5 text-primary" />
-                <span className="font-serif font-bold text-lg">WSI Lab</span>
+                <img 
+                  src={wsiLogo} 
+                  alt="WSI Lab" 
+                  className="h-8"
+                />
               </div>
               <p className="text-muted-foreground max-w-sm mb-6">
                 Pioneering the future of material science and nanotechnology through innovative research and interdisciplinary collaboration.
