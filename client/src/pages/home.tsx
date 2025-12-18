@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-20 pb-20">
       {/* Hero Section */}
-      <section className="relative h-[75vh] min-h-[550px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -27,15 +27,11 @@ export default function Home() {
             <img 
               src={wsiLogo} 
               alt="WSI Lab" 
-              className="h-20 mb-6 drop-shadow-lg"
+              className="h-16 mb-6 drop-shadow-lg"
             />
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
-              Wireless Sensing <br />
-              <span className="text-primary">&amp; Imaging</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Advanced Research in Wireless Sensing
             </h1>
-            <p className="text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed">
-              Advanced research in nanotechnology, materials science, and sensor technology.
-            </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild size="lg" className="px-8">
                 <Link href="/projects">
@@ -82,9 +78,9 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-bold mb-10">Explore Our Work</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { title: "Research Projects", href: "/projects", desc: "View current and completed research initiatives" },
-              { title: "Team", href: "/people", desc: "Meet our faculty, postdocs, and students" },
-              { title: "Publications", href: "/publications", desc: "Browse our latest publications and patents" },
+              { title: "Research Projects", href: "/projects", desc: "View our current initiatives" },
+              { title: "Team", href: "/people", desc: "Meet faculty and students" },
+              { title: "Publications", href: "/publications", desc: "Browse publications and patents" },
             ].map((item, i) => (
               <Link key={i} href={item.href}>
                 <div className="p-6 rounded-lg border hover:border-primary hover:bg-background/50 transition-all cursor-pointer group">
