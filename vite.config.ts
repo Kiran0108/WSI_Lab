@@ -8,6 +8,11 @@ import { metaImagesPlugin } from "./vite-plugin-meta-images";
 export default defineConfig({
   root: path.resolve(import.meta.dirname, "client"),
 
+  optimizeDeps: {
+    include: ["react", "react-dom", "wouter", "@tanstack/react-query"],
+    exclude: ["@replit/vite-plugin-cartographer", "@replit/vite-plugin-dev-banner"]
+  },
+
   plugins: [
     react(),
     runtimeErrorOverlay(),
