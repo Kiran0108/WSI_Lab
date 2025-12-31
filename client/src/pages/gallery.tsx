@@ -1,5 +1,5 @@
 import WSIImg from "@/assets/people/WSI.jpg";
-import WSI1Img from "@/assets/people/EPIC.jpeg";
+import WSI1Img from "@/assets/people/EPIC.jpg";
 export default function Gallery() {
 
   const images = [
