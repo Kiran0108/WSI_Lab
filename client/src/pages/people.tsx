@@ -38,8 +38,8 @@ const peopleData = {
     { name: "Mr. Praveen", role: "PhD Scholar", image: praveenImg, email: "praveenkitti_burri@srmap.edu.in", interests: ["RIS, Antenna Fabrication, UV Lithography"] },
     { name: "Mr. Surya Prakash", role: "PhD Scholar", image: suryaImg, email: "suryaprakash_gummadi@srmap.edu.in", interests: ["Non Contact Physiological Signs Detection"] },
     { name: "Mr. Chandra Wadde", role: "PhD Scholar", image: chandraImg, email: "chandra_vadde@srmap.edu.in", interests: ["FMCW Radar Imaging"] },
-    { name: "Mrs. Gayatri Routhu", role: "JRF/PhD Scholar", image: gayatriImg, email: "gayatri.r@srmap.edu.in", interests: ["ML for RF Design Workflows"] },
-    { name: "Mrs. Sravani", role: "PhD Scholar", image: sravaniImg, email: "sravani_nagireddy@srmap.edu.in", interests: ["DMA for 6G Applications"] },
+    { name: "Ms. Gayatri Routhu", role: "JRF/PhD Scholar", image: gayatriImg, email: "gayatri.r@srmap.edu.in", interests: ["ML for RF Design Workflows"] },
+    { name: "Ms. Sravani", role: "PhD Scholar", image: sravaniImg, email: "sravani_nagireddy@srmap.edu.in", interests: ["DMA for 6G Applications"] },
     { name: "Mr. Amanuel", role: "PhD Scholar", image: ammanuelImg, email: "amanuel_terefetegegn@srmap.edu.in", interests: ["RF Energy Harvesting System"] }
   ],
 
