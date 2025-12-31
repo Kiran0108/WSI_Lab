@@ -6,13 +6,14 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 import { metaImagesPlugin } from "./vite-plugin-meta-images";
 
 export default defineConfig({
+  root: path.resolve(import.meta.dirname, "client"),
+
   plugins: [
     react(),
     runtimeErrorOverlay(),
     tailwindcss(),
     metaImagesPlugin(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
+    ...(process.env.NODE_ENV !== "production" && process.env.REPL_ID
       ? [
           await import("@replit/vite-plugin-cartographer").then((m) =>
             m.cartographer(),
@@ -23,6 +24,7 @@ export default defineConfig({
         ]
       : []),
   ],
+
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -30,22 +32,26 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
+
   css: {
     postcss: {
       plugins: [],
     },
   },
-  root: path.resolve(import.meta.dirname, "client"),
+
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      input: path.resolve(import.meta.dirname, "client/index.html"),
+    },
   },
+
   server: {
-    host: "0.0.0.0",
-    allowedHosts: true,
+    host: "127.0.0.1",
     fs: {
       strict: true,
-      deny: ["**/.*"],
+      allow: [path.resolve(import.meta.dirname, "client")],
     },
   },
 });
