@@ -220,7 +220,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </div>
 
               <p className="text-muted-foreground max-w-sm mb-6 leading-relaxed">
-                Pioneering the future of material science and nanotechnology through innovative research and interdisciplinary collaboration.
+                Where Material Science meets Connectivity: Pioneering the future of Radar, IoT, and Lithography.
               </p>
 
               <div className="flex gap-4">
@@ -250,7 +250,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <ul className="space-y-3">
                 <li className="flex items-start gap-2 text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
-                  <span>S514/ JC 215, SRM University AP, Neerukonda, Andhra Pradesh</span>
+                  <span>S514,SR Block, SRM University AP, Neerukonda, Andhra Pradesh</span>
                 </li>
                 <li className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Mail className="h-4 w-4 shrink-0 text-primary" />
@@ -258,7 +258,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </li>
                 <li className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4 shrink-0 text-primary" />
-                  <span>+91 9618492734</span>
+                  <span>+91 9599355568</span>
                 </li>
               </ul>
             </div>

@@ -40,7 +40,7 @@ const peopleData = {
     { name: "Mr. Chandra Wadde", role: "PhD Scholar", image: chandraImg, email: "chandra_vadde@srmap.edu.in", interests: ["FMCW Radar Imaging"] },
     { name: "Mrs. Gayatri Routhu", role: "JRF/PhD Scholar", image: gayatriImg, email: "gayatri.r@srmap.edu.in", interests: ["ML for RF Design Workflows"] },
     { name: "Mrs. Sravani", role: "PhD Scholar", image: sravaniImg, email: "sravani_nagireddy@srmap.edu.in", interests: ["DMA for 6G Applications"] },
-    { name: "Mr. Ammanuel Terefe Tegegn", role: "PhD Scholar", image: ammanuelImg, email: "amanuel_terefetegegn@srmap.edu.in", interests: ["RF Energy Harvesting System"] }
+    { name: "Mr. Amanuel", role: "PhD Scholar", image: ammanuelImg, email: "amanuel_terefetegegn@srmap.edu.in", interests: ["RF Energy Harvesting System"] }
   ],
 
   btech: [
