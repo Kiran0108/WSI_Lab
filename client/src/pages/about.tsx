@@ -4,11 +4,11 @@ export default function About() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8">About WSI Lab</h1>
-        
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">About WSI & 6G Research Lab</h1>
+
         <div className="prose prose-lg dark:prose-invert max-w-none">
-          <p className="lead text-xl text-muted-foreground mb-8">
-            WSI Lab is a premier interdisciplinary research center dedicated to solving critical challenges in energy, healthcare, and sustainability through nanotechnology.
+          <p className="lead text-xl text-muted-foreground mb-8 text-justify">
+            The Wireless Sensing and Imaging (WSI) Laboratory and the 6G Research Lab at SRM University AP operate under the same research leadership and team. Together, they focus on developing advanced wireless technologies spanning RF systems, antenna design, wireless sensing and radar, electromagnetic imaging, and intelligent signal processing using machine learning.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 my-12">
@@ -19,10 +19,11 @@ export default function About() {
                 className="rounded-xl shadow-lg w-full h-64 object-cover mb-4"
               />
               <h3 className="text-2xl font-bold mb-3">Our Mission</h3>
-              <p>
-                To advance the frontiers of material science while training the next generation of scientific leaders. We believe in open collaboration, rigorous inquiry, and the translation of fundamental discoveries into real-world impact.
+              <p className="text-justify">
+                To conduct impactful research in wireless sensing, RF systems, and electromagnetic technologies while training skilled engineers and researchers to solve real-world challenges.
               </p>
             </div>
+
             <div>
               <img 
                 src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?w=800&q=80" 
@@ -30,25 +31,16 @@ export default function About() {
                 className="rounded-xl shadow-lg w-full h-64 object-cover mb-4"
               />
               <h3 className="text-2xl font-bold mb-3">Our Vision</h3>
-              <p>
-                A world where advanced materials enable clean energy for all, personalized medicine, and sustainable manufacturing processes.
+              <p className="text-justify">
+                To build a globally recognized research ecosystem in wireless sensing, imaging, and next-generation communication technologies.
               </p>
             </div>
           </div>
 
           <h2 className="text-3xl font-bold mt-12 mb-6">History</h2>
-          <p>
-            Founded in 2010 by Dr. Alexander Vance, WSI Lab started as a small photonics group. Over the past decade, we have expanded to include over 25 researchers from diverse backgrounds including chemistry, physics, and engineering. Our lab has secured over $10M in federal funding and produced numerous patents and high-impact publications.
+          <p className="text-justify">
+            Since its inception, the WSI Lab and the 6G Research Lab have jointly contributed to research in wireless communication, sensing, and imaging through innovative system designs, high-fidelity simulations, experimental validation, and high-impact publications.
           </p>
-
-          <div className="bg-muted p-8 rounded-xl mt-12 text-center">
-            <h3 className="text-2xl font-bold mb-4">Join Us</h3>
-            <p className="mb-6">
-              We are always looking for motivated students and postdocs to join our team. 
-              If you are passionate about nanotechnology and material science, we want to hear from you.
-            </p>
-            <Button size="lg">Apply for a Position</Button>
-          </div>
         </div>
       </div>
     </div>

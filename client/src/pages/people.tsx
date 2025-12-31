@@ -1,113 +1,95 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Mail, Linkedin, GraduationCap } from "lucide-react";
+import { Mail, GraduationCap } from "lucide-react";
+import { Linkedin } from "lucide-react";
+
+// === Local Images ===
+import rupeshImg from "@/assets/people/rupesh.jpg";
+import ramaraoImg from "@/assets/people/ramarao.png";
+import abzalImg from "@/assets/people/abzal.png";
+import praveenImg from "@/assets/people/praveen.png";
+import suryaImg from "@/assets/people/surya.png";
+import chandraImg from "@/assets/people/chandra.png";
+import gayatriImg from "@/assets/people/gayatri.png";
+import sravaniImg from "@/assets/people/sravani.png";
+import ammanuelImg from "@/assets/people/ammanuel.jpg";
+import murthyImg from "@/assets/people/murthy.png";
+import prasannaImg from "@/assets/people/prasanna.png";
+import kiranImg from "@/assets/people/kiran.png";
+import navyaImg from "@/assets/people/navya.png";
+import varshithaImg from "@/assets/people/varshitha.png";
+
+// === PNG Detector ===
+function isPng(src: string) {
+  return src.toLowerCase().endsWith(".png");
+}
 
 const peopleData = {
   professors: [
-    {
-      name: "Dr. Alexander Vance",
-      role: "Principal Investigator",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-      email: "alex.vance@uni.edu",
-      interests: ["Nanotechnology", "Quantum Materials", "Photonics"],
-      bio: "Dr. Vance leads the ARL with over 20 years of experience in material science."
-    }
+    { name: "Prof. Rupesh Kumar", image: rupeshImg, email: "rupesh.k@srmap.edu.in", interests: ["Antennas, Radar, IoT, Smart Agriculture"] },
+    { name: "Prof. T. Rama Rao", image: ramaraoImg, email: "ramarao.t@srmap.edu.in", interests: ["Antennas, Radar"] }
   ],
+
   postdocs: [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Postdoctoral Fellow",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-      email: "sarah.c@uni.edu",
-      interests: ["Solar Cells", "Perovskites"],
-    },
-    {
-      name: "Dr. Marcus Thorne",
-      role: "Postdoctoral Fellow",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      email: "m.thorne@uni.edu",
-      interests: ["Battery Tech", "Electrochemistry"],
-    }
+    { name: "Dr. S. Md. Abzal", role: "Postdoctoral Fellow", image: abzalImg, email: "mohammedabzal.s@srmap.edu.in", interests: ["Synthesis and Fabrication of 2D materials for THz Applications"] }
   ],
+
   phd: [
-    {
-      name: "Emily White",
-      role: "PhD Candidate",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-      email: "emily.w@uni.edu",
-      interests: ["Biosensors"],
-    },
-    {
-      name: "David Kim",
-      role: "PhD Candidate",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-      email: "d.kim@uni.edu",
-      interests: ["2D Materials"],
-    },
-    {
-      name: "Priya Patel",
-      role: "PhD Candidate",
-      image: "https://images.unsplash.com/photo-1598550874175-4d7112ee7f43?w=400&h=400&fit=crop",
-      email: "p.patel@uni.edu",
-      interests: ["Microfluidics"],
-    }
+    { name: "Mr. Praveen", role: "PhD Scholar", image: praveenImg, email: "praveenkitti_burri@srmap.edu.in", interests: ["RIS, Antenna Fabrication, UV Lithography"] },
+    { name: "Mr. Surya Prakash", role: "PhD Scholar", image: suryaImg, email: "suryaprakash_gummadi@srmap.edu.in", interests: ["Non Contact Physiological Signs Detection"] },
+    { name: "Mr. Chandra Wadde", role: "PhD Scholar", image: chandraImg, email: "chandra_vadde@srmap.edu.in", interests: ["FMCW Radar Imaging"] },
+    { name: "Mrs. Gayatri Routhu", role: "JRF/PhD Scholar", image: gayatriImg, email: "gayatri.r@srmap.edu.in", interests: ["ML for RF Design Workflows"] },
+    { name: "Mrs. Sravani", role: "PhD Scholar", image: sravaniImg, email: "sravani_nagireddy@srmap.edu.in", interests: ["DMA for 6G Applications"] },
+    { name: "Mr. Ammanuel Terefe Tegegn", role: "PhD Scholar", image: ammanuelImg, email: "amanuel_terefetegegn@srmap.edu.in", interests: ["RF Energy Harvesting System"] }
   ],
+
   btech: [
-    {
-      name: "James Wilson",
-      role: "Undergraduate Researcher",
-      image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=400&h=400&fit=crop",
-      email: "j.wilson@uni.edu",
-      interests: ["Data Analysis"],
-    },
-    {
-      name: "Lisa Wong",
-      role: "Undergraduate Researcher",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
-      email: "l.wong@uni.edu",
-      interests: ["Lab Automation"],
-    }
+    { name: "Pondala Venkata Ramana Murthy", role: "Undergraduate Researcher", image: murthyImg, email: "venkataramanamurthy_pondala@srmap.edu.in", interests: ["Radar Imaging using SPARSE Techniques, IoT"] },
+    { name: "Prasanna Kumar Seelam", role: "Undergraduate Researcher", image: prasannaImg, email: "prasannakumar_seelam@srmap.edu.in", interests: ["RF Frontend Design, Antenna Fabrication, IoT"] },
+    { name: "Damarla Venkata Naga Sai Kiran", role: "Undergraduate Researcher", image: kiranImg, email: "venkatanagasaikiran_damarla@srmap.edu.in", interests: ["SDR, Radar Imaging, IoT"] },
+    { name: "Navya Sree Gottumukkala", role: "Undergraduate Researcher", image: navyaImg, email: "navyasree_gottumukkala@srmap.edu.in", interests: ["IoT"] },
+    { name: "Varshitha Pillarsetty", role: "Undergraduate Researcher", image: varshithaImg, email: "varshitha_pillarisetty@srmap.edu.in", interests: ["RF Energy Harvesting System"] }
   ]
 };
 
 function PersonCard({ person }: { person: any }) {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 border-none bg-muted/30">
+    <Card className="flex flex-col bg-muted/30 border-none hover:shadow-xl transition">
       <CardHeader className="p-0">
-        <div className="aspect-square w-full overflow-hidden">
-          <img 
-            src={person.image} 
-            alt={person.name} 
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+        <div className="aspect-square w-full overflow-hidden relative">
+          {isPng(person.image) && (
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/40 via-muted to-background" />
+          )}
+          <img
+            src={person.image}
+            alt={person.name}
+            loading="lazy"
+            decoding="async"
+            className={`relative z-10 w-full h-full transition duration-500 ease-out hover:scale-[1.03]
+              ${isPng(person.image) ? "object-contain p-6" : "object-cover"}
+              [filter:contrast(1.04)_saturate(1.05)_brightness(1.02)]
+              will-change-transform`}
           />
+          <div className="absolute inset-0 ring-1 ring-black/5 pointer-events-none" />
         </div>
       </CardHeader>
-      <CardContent className="p-6">
-        <h3 className="font-serif font-bold text-xl mb-1">{person.name}</h3>
-        <p className="text-primary font-medium text-sm mb-4">{person.role}</p>
-        
-        {person.bio && <p className="text-muted-foreground text-sm mb-4">{person.bio}</p>}
-        
-        <div className="flex flex-wrap gap-2 mb-4">
+
+      <CardContent className="p-6 flex flex-col items-start h-full">
+        <h3 className="font-serif font-bold text-xl">{person.name}</h3>
+        <p className="text-primary text-sm mb-4">{person.role}</p>
+
+        <div className="flex flex-wrap gap-2 max-w-full mb-4">
           {person.interests.map((interest: string) => (
-            <Badge key={interest} variant="secondary" className="text-xs font-normal">
+            <span key={interest} className="inline-flex max-w-full break-words rounded-full bg-secondary text-secondary-foreground px-3 py-1 text-xs font-medium leading-snug">
               {interest}
-            </Badge>
+            </span>
           ))}
         </div>
 
-        <div className="flex gap-3 mt-auto pt-4 border-t">
-          <a href={`mailto:${person.email}`} className="text-muted-foreground hover:text-primary transition-colors">
-            <Mail className="h-4 w-4" />
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-            <Linkedin className="h-4 w-4" />
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-            <GraduationCap className="h-4 w-4" />
-          </a>
+        <div className="flex gap-3 mt-auto pt-4 border-t w-full">
+          <a href={`mailto:${person.email}`} className="hover:text-primary text-muted-foreground"><Mail className="h-4 w-4" /></a>
+          <a href="#" className="hover:text-primary text-muted-foreground"><Linkedin className="h-4 w-4" /></a>
+          <a href="#" className="hover:text-primary text-muted-foreground"><GraduationCap className="h-4 w-4" /></a>
         </div>
       </CardContent>
     </Card>
@@ -117,41 +99,24 @@ function PersonCard({ person }: { person: any }) {
 export default function People() {
   return (
     <div className="container mx-auto px-4 py-16">
-      <div className="max-w-2xl mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Team</h1>
-        <p className="text-xl text-muted-foreground">
-          Meet the researchers, students, and staff driving innovation at ARL.
-        </p>
-      </div>
+      <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Team</h1>
 
-      <Tabs defaultValue="professors" className="w-full">
-        <TabsList className="mb-8 w-full justify-start h-auto flex-wrap gap-2 bg-transparent p-0">
-          <TabsTrigger value="professors" className="data-[state=active]:bg-primary data-[state=active]:text-white border px-6 py-2 rounded-full">Professors</TabsTrigger>
-          <TabsTrigger value="postdocs" className="data-[state=active]:bg-primary data-[state=active]:text-white border px-6 py-2 rounded-full">Post Docs</TabsTrigger>
-          <TabsTrigger value="phd" className="data-[state=active]:bg-primary data-[state=active]:text-white border px-6 py-2 rounded-full">PhD Students</TabsTrigger>
-          <TabsTrigger value="btech" className="data-[state=active]:bg-primary data-[state=active]:text-white border px-6 py-2 rounded-full">B.Tech Students</TabsTrigger>
+      <Tabs defaultValue="professors">
+        <TabsList className="mb-8 flex flex-wrap gap-2 bg-transparent p-0">
+          {["professors", "postdocs", "phd", "btech"].map((t) => (
+            <TabsTrigger key={t} value={t} className="px-6 py-2 rounded-full border data-[state=active]:bg-primary data-[state=active]:text-white">
+              {t.toUpperCase()}
+            </TabsTrigger>
+          ))}
         </TabsList>
 
-        <TabsContent value="professors" className="mt-0">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {peopleData.professors.map((p, i) => <PersonCard key={i} person={p} />)}
-          </div>
-        </TabsContent>
-        <TabsContent value="postdocs" className="mt-0">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {peopleData.postdocs.map((p, i) => <PersonCard key={i} person={p} />)}
-          </div>
-        </TabsContent>
-        <TabsContent value="phd" className="mt-0">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {peopleData.phd.map((p, i) => <PersonCard key={i} person={p} />)}
-          </div>
-        </TabsContent>
-        <TabsContent value="btech" className="mt-0">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {peopleData.btech.map((p, i) => <PersonCard key={i} person={p} />)}
-          </div>
-        </TabsContent>
+        {Object.entries(peopleData).map(([key, list]: any) => (
+          <TabsContent key={key} value={key}>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {list.map((p: any, i: number) => <PersonCard key={i} person={p} />)}
+            </div>
+          </TabsContent>
+        ))}
       </Tabs>
     </div>
   );
